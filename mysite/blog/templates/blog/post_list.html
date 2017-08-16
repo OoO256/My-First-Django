@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
+<style>
+  .post_box{
+    background-color: cyan;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+</style>
   <head>
     <meta charset="utf-8">
     <title>ㅈ같은 웹프</title>
   </head>
   <body>
-    <div>
-      <h1><a href="#">Blog</a></h1>
+    {{ posts }}
+
+    {% for post in posts %}
+    <div class=post_box>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
     <div>
       <p>published 2017/08/16, 10:00</p>
       <h2><a href="#">웹프가 시러요</a></h2>
