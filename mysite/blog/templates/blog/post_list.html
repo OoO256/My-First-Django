@@ -1,3 +1,4 @@
+{% extends 'blog/base.html' %}
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
@@ -6,27 +7,18 @@
     <meta charset="utf-8">
     <title>HTML</title>
   </head>
-  <header>
-    <h1>갓갓용욱's 첫 웹프</h1>
-  </header>
-  <nav>
-    <p>nav</p>
-  </nav>
   <body>
-    <div class="content">
-    {% extends 'blog/base.html' %}
     {% block content %}
       {% for post in posts %}
           <div class="post">
               <div class="date">
               {{ post.published_date }}
               </div>
-          <h1><a href="">{{ post.title }}</a></h1>
+          <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
           <p>{{ post.text|linebreaksbr }}</p>
           </div>
       {% endfor %}
     {% endblock %}
-    <div>
       <p>published 2017/08/16, 10:00</p>
       <h2><a href="#">웹프가 시러요</a></h2>
       <p>알고리즘이 꿀젬인데 문돌이들은 그걸 몰라요</p>

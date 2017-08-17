@@ -1,6 +1,6 @@
 .post_box{
   padding: 20px;
-  border-left: 20px dotted orange;
+  border-left: 20px solid orange;
   margin-left: 20px;
   margin-right: 50px;
   margin-top: 30px;
@@ -11,10 +11,16 @@
 }
 .page-header{
   background-color: cyan;
-  font-size: 100px;
-  color: white;
+  color: white !important;
   padding: 30px;
   margin: 0px;
+}
+.page-header a{
+  color: white !important;
+  text-decoration-color: white;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  font-size: 100px;
 }
 nav{
   width: 200px;
@@ -28,6 +34,6 @@ nav{
 body{
   margin: 0px;
 }
-.content{
+.content-container{
   float: left;
 }
