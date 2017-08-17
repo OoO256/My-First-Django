@@ -1,0 +1,33 @@
+.post_box{
+  padding: 20px;
+  border-left: 20px dotted orange;
+  margin-left: 20px;
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: yellow;
+  width: 800px;
+  ba
+}
+.page-header{
+  background-color: cyan;
+  font-size: 100px;
+  color: white;
+  padding: 30px;
+  margin: 0px;
+}
+nav{
+  width: 200px;
+  height: 1000px;
+  float: left;
+  border-right: 20px cyan solid;
+  background-color: white;
+  padding: 30px;
+  margin-right: 20px;
+}
+body{
+  margin: 0px;
+}
+.content{
+  float: left;
+}
