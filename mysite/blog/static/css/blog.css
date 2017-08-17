@@ -1,13 +1,12 @@
 .post_box{
   padding: 20px;
   border-left: 20px solid orange;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-right: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: yellow;
   width: 800px;
-  ba
 }
 .page-header{
   background-color: cyan;
@@ -36,4 +35,21 @@ body{
 }
 .content-container{
   float: left;
+}
+.menu-bar{
+  background-color: pink;
+  margin: 0px;
+  height: 50px;
+  padding: 15px;
+  color: white;
+}
+.post-form button{
+  margin: 15px;
+}
+#edit-button{
+  margin: 15px;
+  float: right;
+  padding: 5px;
+  background-image: none;
+  background-color: orange;
 }

@@ -1,33 +1,11 @@
 {% extends 'blog/base.html' %}
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
-  <head>
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <meta charset="utf-8">
-    <title>HTML</title>
-  </head>
-  <body>
-    {% block content %}
-      {% for post in posts %}
-          <div class="post">
-              <div class="date">
-              {{ post.published_date }}
-              </div>
-          <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-          <p>{{ post.text|linebreaksbr }}</p>
+{% block content %}
+  {% for post in posts %}
+      <div class="post">
+          <div class="date">
+          {{ post.published_date }}
           </div>
-      {% endfor %}
-    {% endblock %}
-      <p>published 2017/08/16, 10:00</p>
-      <h2><a href="#">웹프가 시러요</a></h2>
-      <p>알고리즘이 꿀젬인데 문돌이들은 그걸 몰라요</p>
-    </div>
-    <div>
-      <h2>c++>>>>>>>>python</h2>
-      <p>반박시 지상렬</p>
-      <p><a href="#">c++이 가장 우수한 언어이며, 이는 과학적으로도 증명되었다.</a></p>
-    </div>
-    </div>
-  </body>
-</html>
+      <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      </div>
+  {% endfor %}
+{% endblock %}

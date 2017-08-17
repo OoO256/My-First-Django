@@ -2,6 +2,7 @@
 
 {% block content %}
     <div class="post">
+        <a id='edit-button' class="btn-default" href="{% url 'post_edit' pk=post.pk %}">과거의 경솔한 발언을 없던 것으로 만들기</a>
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
